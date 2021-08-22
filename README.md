@@ -43,6 +43,7 @@ All the installed dependencies
 ## Important Urls
 [1] CRUD Operation using firebase::  https://www.positronx.io/angular-7-firebase-5-crud-operations-with-reactive-forms/
 [2] CRUD Operation using firestore:: https://www.bezkoder.com/angular-10-firestore-crud-angularfire/
+[3] Git Url: https://www.edureka.co/blog/git-tutorial/
 
 
 ## Git hub
@@ -60,7 +61,7 @@ All the installed dependencies
         <td>It will show you the status i.e is there any changes pending to commit.</td>
     </tr>
     <tr>
-        <td>git remote add origin <git-repository-url> </td>
+        <td>git remote add origin {git-repository-url} </td>
         <td>Add url to already created repo in local for doing push/pull operations</td>
     </tr>
     <tr>
@@ -68,7 +69,7 @@ All the installed dependencies
         <td>Pull the repo which is in master branch</td>
     </tr>
     <tr>
-        <td>git pull <branch-name> </td>
+        <td>git pull {branch-name} </td>
         <td>Pull the repo in the specific branch</td>
     </tr>
     <tr>
@@ -76,12 +77,8 @@ All the installed dependencies
         <td>Add all the changes to stage before commit</td>
     </tr>
     <tr>
-        <td>git commit -m"<commit-message>" </td>
+        <td>git commit -m"{commit-message}" </td>
         <td>commit the changes, code is ready to push</td>
-    </tr>
-    <tr>
-        <td>git push origin master </td>
-        <td>Push the changes to master branch</td>
     </tr>
     <tr>
         <td>git push origin master </td>
