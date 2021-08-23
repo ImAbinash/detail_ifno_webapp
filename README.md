@@ -29,6 +29,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # Dev Info
 This section contains all the information regarding all development information along with url, dependency plugins ...etc
 
+## CLI Commands
+All cli commands used in current projects
+    1. generate admin feature module: npx ng generate module admin/admin --module app --flat --routing
+    2. generate component in admin module: npx ng g c admin/category
+
 ## Dependencies 
 All the installed dependencies
 
@@ -40,11 +45,14 @@ All the installed dependencies
 ### font-awesome
     1.  Font Awesome: npm install --save @fortawesome/fontawesome-free
 
+### Angular fire (firebase communication)
+    1. angular-fire: npm install firebase @angular/fire
+
 ## Important Urls
 [1] CRUD Operation using firebase::  https://www.positronx.io/angular-7-firebase-5-crud-operations-with-reactive-forms/
 [2] CRUD Operation using firestore:: https://www.bezkoder.com/angular-10-firestore-crud-angularfire/
 [3] Git Url: https://www.edureka.co/blog/git-tutorial/
-
+[4] angular + firestore: https://fireship.io/snippets/install-angularfire/
 
 ## Git hub
 <table>
