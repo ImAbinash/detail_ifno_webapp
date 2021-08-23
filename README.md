@@ -92,4 +92,24 @@ All the installed dependencies
         <td>git push origin master </td>
         <td>Push the changes to master branch</td>
     </tr>
+    <tr>
+        <td>git checkout {feature-branch}</td>
+        <td>Switch to feature-branch</td>
+    </tr>
+    <tr>
+        <td>git checkout {feature-branch}</td>
+        <td>Switch to feature-branch</td>
+    </tr>
+    <tr>
+        <td>git merge --no-ff {lower-branch}</td>
+        <td>Merging the changes made for lowerbranch with upper branch</td>
+    </tr>
+    <tr>
+        <td>git tag -a v1.4 -m "my version 1.4"</td>
+        <td>Add a tag to a branch, here v1.4 is tag name my version 1.4 is message for tag.</td>
+    </tr>
+
+
+
+
 </table>
