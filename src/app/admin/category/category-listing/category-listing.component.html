@@ -1,6 +1,12 @@
+<div class="mb-3">
+    <span class="cl-heading">Category list</span>
+    <span style="float: right;"><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+            data-bs-target="#categoryModal">Add Category</button></span>
+</div>
+
 <div class="row">
     <div class="col-sm-4 col-4">
-        <div class="card category-listing-active-card">
+        <div class="card cl-active-card">
             <div class="card-body">
                 <h5 class="card-title">Income </h5>
                 <p class="card-text">
@@ -31,72 +37,111 @@
     </div>
 </div>
 
-<div class="row category-listing-form-table">
-    <div class="col-sm-4" style="border-right: 1px solid;">
-        <form class="was-validated">
-            <div>
-                <label for="validationServer01" class="form-label">Label</label>
-                <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="mb-3">
-                <input type="file" class="form-control" aria-label="file example" required>
-                <div class="invalid-feedback">Example invalid form file feedback</div>
-            </div>
-            <div class="mb-3">
-                <label for="validationTextarea" class="form-label">Description</label>
-                <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
-                <div class="invalid-feedback">
-                  Please enter a message in the textarea.
-                </div>
-              </div>
-            <div class="mb-3">
-                <button class="btn btn-primary" type="submit">Save Changes </button>
-            </div>
-        </form>
-    </div>
-    <div class="col-sm-8">
-        <table class="table table-sm caption-top">
-            <caption>List of users</caption>
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Label</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Modify</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Salary(Full Time)</td>
-                    <td>Otto</td>
-                    <td>Active</td>
-                    <td>Full time job salary</td>
-                    <td>Edit | Upda | Del</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Salary(Full Time)</td>
-                    <td>Otto</td>
-                    <td>Active</td>
-                    <td>Full time job salary</td>
-                    <td>Edit | Upda | Del</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Salary(Full Time)</td>
-                    <td>Otto</td>
-                    <td>Active</td>
-                    <td>Full time job salary</td>
-                    <td>Edit | Upda | Del</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
+<div class="cl-categoriestype">
+    <span class="mr-15 cl-active-category-type">All Categories</span>
+    <span class="mr-15">Income</span>
+    <span class="mr-15">Expense</span>
+    <span class="mr-15">Debt</span>
+</div>
+<div class="row cl-mb-5">
+    <div class="col-sm-1 cl-table-header">Sl No.</div>
+    <div class="col-sm-3 cl-table-header">Label</div>
+    <div class="col-sm-2 cl-table-header">Status</div>
+    <div class="col-sm-4 cl-table-header">Description</div>
+    <div class="col-sm-2 cl-table-header">Modify</div>
+</div>
+<div class="row cl-mb-5">
+    <div class="col-sm-1">1</div>
+    <div class="col-sm-3">Salaried(Full time)</div>
+    <div class="col-sm-2"><span class="cl-active-category">Active</span></div>
+    <div class="col-sm-4">Full time employee salary</div>
+    <div class="col-sm-2">
+        <span class="cl-edit-fa"><i class="fas fa-edit"></i></span>
+        <div class="form-check form-switch" style="display: inline-block;">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" style="margin-top: 7px;"
+                checked>
+            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+        </div>
+    </div>
+</div>
+<div class="row cl-mb-5">
+    <div class="col-sm-1">2</div>
+    <div class="col-sm-3">Salaried(Part time)</div>
+    <div class="col-sm-2"><span class="cl-inactive-category">In active</span></div>
+    <div class="col-sm-4">Part time employee salary</div>
+    <div class="col-sm-2">
+        <span class="cl-edit-fa"><i class="fas fa-edit"></i></span>
+        <div class="form-check form-switch" style="display: inline-block;">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" style="margin-top: 7px;">
+            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="categoryModal" #categoryModal tabindex="-1" aria-labelledby="categoryModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="categoryModalLabel">Category Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeButton"
+                    #closeButton></button>
+            </div>
+            <div class="modal-body">
+
+                <form class="was-validated" [formGroup]="categoryForm" (ngSubmit)="saveChanges()">
+
+                    <div>
+                        <label for="validationDefault04" class="form-label">Category</label>
+                        <select class="form-select" id="validationDefault04" required formControlName="categoryType">
+                            <option selected disabled value="">Choose category type...</option>
+                            <option>Income</option>
+                            <option>Expense</option>
+                            <option>Debtor</option>
+                        </select>
+                        <div class="invalid-feedback" *ngIf="catForm.categoryType.errors">
+                            Choose category type
+                        </div>
+                    </div>
+                    <div>
+                        <label for="validationServer01" class="form-label">Label</label>
+                        <input type="text" class="form-control is-valid" id="label" name="label" formControlName="label"
+                            required>
+                        <div class="invalid-feedback" *ngIf="catForm.label.errors">
+                            Label cann't be blank.
+                        </div>
+                    </div>
+                    <div>
+                        <label for="imageUrl" class="form-label">imageUrl</label>
+                        <input type="text" class="form-control is-valid" id="imageUrl" required
+                            formControlName="imageUrl">
+                        <div class="invalid-feedback" *ngIf="catForm.imageUrl.errors">
+                            Image url cann't be blank.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control is-invalid" id="description"
+                            placeholder="Required example textarea" required formControlName="description"></textarea>
+                        <div class="invalid-feedback" *ngIf="catForm.description.errors">
+                            Description cann't be blank.
+                        </div>
+                    </div>
+                    <div class="form-check form-switch" style="padding-left: 0px;">
+                        <label class="form-check-label" for="status" style="margin-right: 8px;">Active Status: </label>
+                        <input class="form-check-input cl-form-check-input" type="checkbox" id="status"
+                            formControlName="isActive">
+                    </div>
+
+                    <div class="mb-3" style="margin-top: 20px;">
+                        <button class="btn btn-primary" type="submit" [disabled]="categoryForm.invalid">Save Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

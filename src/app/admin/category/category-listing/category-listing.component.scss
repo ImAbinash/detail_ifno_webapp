@@ -1,11 +1,63 @@
-.category-listing-form-table{
+.cl-heading{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.cl-form-table{
     background-color: #f7f7f7;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid gray;
 }
 
-.category-listing-active-card{
+.cl-active-card{
     background-color: #af9e9e36;
     color: #2265df;
+}
+.cl-categoriestype{
+    border-bottom: 1px solid #dfdede;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    span:hover{
+        cursor: pointer;
+    }
+    
+}
+.cl-active-category-type{
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+}
+.cl-table-header{
+    font-weight: 500;
+}
+.cl-active-category{
+    background-color: #1361d5d1;
+    color: white;
+    padding: 0px 10px 3px 10px;
+}
+.cl-inactive-category{
+    background-color: #80004d;
+    color: white;
+    padding: 0px 10px 3px 10px;
+}
+.cl-mb-5{
+    margin-bottom: 5px;
+}
+
+.cl-edit-fa{
+    font-size: 14px;
+    color: #0d6efd;
+    margin-right: 18px;
+    cursor: pointer;
+}
+
+.cl-delete-fa{
+    font-size: 14px;
+    color: #80004d;
+    cursor: pointer;
+}
+.cl-form-check-input{
+    margin-left: 0px;
+    margin-top: 7px;
+    float: none;
 }

@@ -45,6 +45,15 @@ All the installed dependencies
 ### font-awesome
     1.  Font Awesome: npm install --save @fortawesome/fontawesome-free
 
+### UUID
+    1. npm install uuid
+    2. npm i @types/uuid
+
+## toast message
+    1. npm install ngx-toastr --save
+    2. npm install @angular/animations --save
+
+
 ### Angular fire (firebase communication)
     1. angular-fire: npm install firebase @angular/fire
 
@@ -53,6 +62,8 @@ All the installed dependencies
 [2] CRUD Operation using firestore:: https://www.bezkoder.com/angular-10-firestore-crud-angularfire/
 [3] Git Url: https://www.edureka.co/blog/git-tutorial/
 [4] angular + firestore: https://fireship.io/snippets/install-angularfire/
+[5] Toastr : https://www.itsolutionstuff.com/post/how-to-use-toaster-notification-in-angular-8example.html
+
 
 ## Git hub
 <table>
